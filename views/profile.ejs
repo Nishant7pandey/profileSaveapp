@@ -1,0 +1,75 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Profile Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text],input[type=number], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    -->
+</head>    
+<body>    
+    <center> <h1> Profile Page  </h1> </center>   
+    <form action='/profile' method="POST">
+        <img src="*">  
+        <div class="container">   
+            <label for="name">Name : </label>   
+            <input type="text" placeholder="Enter Name" value=<%= a.name %> name="name" required>  
+            <label for="email">Email : </label>  
+            <input type="text" placeholder="Enter Email" value=<%= a.email %> name="email" readonly>  
+            <label for="username">Username : </label>    
+            <input type="text" placeholder="Enter Username" value=<%= a.username %> name="username" readonly>  
+            <label for="phonenumber">Phone Number :</label>   
+            <input type="number" placeholder="Enter Phone Number" value=<%= a.phoneNumber %> name="phonenumber" required>  
+            <label for="password">Password : </label>   
+            <input type="text" placeholder="Enter Password" name="password" readonly>  
+            <label for="CollegeName">CollegeName : </label>   
+            <input type="text" placeholder="Enter CollegeName" value=<%= a.college  %> name="CollegeName" required>  
+            <label for="State">State : </label>   
+            <input type="text" placeholder="Enter State" name="State" required>  
+            <label for="Country">Country : </label>   
+            <input type="text" placeholder="Enter Country" name="Country" required>  
+            <button type="submit">Save</button>   
+        </div>   
+    </form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>     
+</body>     
+</html> 
